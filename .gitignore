@@ -3,12 +3,7 @@
 .ipynb_checkpoints
 *.pyc
 
-/csv_histories/*
-!/csv_histories/test.csv
-/divided_dialogs/*
-!/divided_dialogs/test.csv
-!/divided_dialogs/README.md
-/histories/*
-!/histories/test.csv
-/processed_csv_histories/*
-!/processed_csv_histories/test.csv
+/csv_*/*
+!/csv_*/README.md
+/json_*/*
+!/json_*/README.md
