@@ -1,5 +1,12 @@
-/csv_histories/*
-/divided_dialogs/*
-/histories/*
-/processed_csv_histories/*
 /old
+*.pyc
+
+/csv_histories/*
+!/csv_histories/test.csv
+/divided_dialogs/*
+!/divided_dialogs/test.csv
+!/divided_dialogs/README.md
+/histories/*
+!/histories/test.csv
+/processed_csv_histories/*
+!/processed_csv_histories/test.csv
