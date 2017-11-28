@@ -1,4 +1,6 @@
 /old
+
+.ipynb_checkpoints
 *.pyc
 
 /csv_histories/*
