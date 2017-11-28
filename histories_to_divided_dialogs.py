@@ -27,8 +27,8 @@ def dialogs_getter(history):
     return dialogs
 
 if __name__ == "__main__":
-    histories_path = 'histories'
-    dialogs_path = 'divided_dialogs'
+    histories_path = 'json_histories'
+    dialogs_path = 'json_dialogs'
     group_ids = [int(re.split('\.', f)[0]) for f in listdir(histories_path) if isfile(join(histories_path, f))]
 
     for group_id in group_ids:

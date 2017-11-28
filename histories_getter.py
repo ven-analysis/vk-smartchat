@@ -34,7 +34,7 @@ if __name__ == "__main__":
             user_ids = json.load(f)
             print('len(user_ids)', len(user_ids))
 
-            with open('histories/{}.json'.format(group_id), 'w') as f_res:
+            with open('json_histories/{}.json'.format(group_id), 'w') as f_res:
                 for i, user_id in enumerate(user_ids):
                     print(i, 'for user', user_id)
                     offset = 0
