@@ -1,4 +1,4 @@
-#!/usr/env/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf8 -*-
 
 
@@ -29,12 +29,12 @@ def dialogs_getter(history):
 if __name__ == "__main__":
     histories_path = 'json_histories'
     dialogs_path = 'json_dialogs'
-    group_ids = [int(re.split('\.', f)[0]) for f in listdir(histories_path) if isfile(join(histories_path, f))]
+    group_ids = [int(re.split('\.', f)[0]) for f in listdir(histories_path) if (isfile(join(histories_path, f)) and re.match('\d+.json', f) is not None)]
 
     for group_id in group_ids:
         print('for group', group_id)
-        with open('{}/{}.json'.format(histories_path, group_id), 'r') as f, \
-             open('{}/{}.json'.format(dialogs_path, group_id), 'w') as res_f:
+        with open(join(histories_path, '{}.json'.format(group_id)), 'r') as f, \
+             open(join(dialogs_path, '{}.json'.format(group_id)), 'w') as res_f:
             for line in f:
                 user_history = json.loads(line[:-1])
                 user_id = user_history.keys().__iter__().__next__()
